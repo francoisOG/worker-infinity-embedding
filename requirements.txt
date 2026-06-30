@@ -1,5 +1,6 @@
 runpod~=1.7.0
 infinity-emb[all]==0.0.77
 transformers>=4.51.0  # Qwen3 architecture support (qwen3 added in transformers 4.51)
+optimum>=1.23,<2.0  # keep optimum.bettertransformer (removed in optimum 2.0); infinity 0.0.77 imports it unguarded
 einops # deployment of custom code with nomic
 git+https://github.com/pytorch-labs/float8_experimental.git

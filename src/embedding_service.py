@@ -25,6 +25,9 @@ class EmbeddingService:
                     dtype=dtype,
                     model_warmup=False,
                     lengths_via_tokenize=True,
+                    # BetterTransformer is deprecated and RuntimeErrors with
+                    # transformers>4.49 (optimum #2277); Qwen3 uses native SDPA.
+                    bettertransformer=False,
                 )
             )
 
