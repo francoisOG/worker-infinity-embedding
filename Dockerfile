@@ -20,7 +20,7 @@ COPY requirements.txt /requirements.txt
 RUN uv pip install -r /requirements.txt --system
 
 # install torch
-RUN pip install torch==2.5.1+cu124 --index-url https://download.pytorch.org/whl/test/cu124 --no-cache-dir
+RUN pip install torch==2.5.1+cu124 --index-url https://download.pytorch.org/whl/cu124 --no-cache-dir
 
 # --- OPTIONAL: pre-bake the embedding model into the image to remove the
 # Hugging Face download from cold start.
